@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: xegxqts3g-dotnet-basic
+  janus-idp.io/tekton: xegxqts3g-dotnet-basic
+  backstage.io/kubernetes-id: xegxqts3g-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: xegxqts3g-dotnet-basic
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
